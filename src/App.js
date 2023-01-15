@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
+import Frase from './components/Frase';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Frase texto="teste"/>
+      <HelloWorld />
+      <SayMyName name="Gotho"/>
+      <Pessoa nome="José" idade="26" profissao="Developer" foto="https://img.freepik.com/fotos-gratis/construtor-de-homem-carpinteiro-polimentos-placa-de-madeira-com-uma-lixadeira-de-orbita-aleatoria_23-2147944854.jpg?w=2000"/>
     </div>
   );
 }
