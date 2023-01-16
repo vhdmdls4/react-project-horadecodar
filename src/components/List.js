@@ -2,18 +2,15 @@ import Item from "./Item";
 
 export default function List() {
     return(
-        <div>
+        <>
             <h1>
                 Lista
             </h1>
             <ul>
-                <li>
-                    <Item marca="Volks"/>
-                </li>
-                <li>
-                    <Item marca="Wagen"/>
-                </li>
+                <Item marca="Volks" lancamento={1975}/>
+                <Item marca="Wagen" lancamento={1969}/>
+                <Item lancamento={1986}/>
             </ul>
-        </div>
+        </>
     )
 }
