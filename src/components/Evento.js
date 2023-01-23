@@ -1,31 +1,15 @@
 import { useState } from "react";
+import Button from "./Button";
 
 export default function Evento() {
-  const [txt, setTxt] = useState("teste");
+  function meuEvento(){
+    console.log("Primér event")
+  }
 
-  if (txt) {
-    return (
+  return (
       <div>
         <p>Clique para gerar o evento:</p>
-        <button
-          onClick={() => {
-            console.log("deu");
-            setTxt(parseInt(txt) + 1);
-          }}
-        >
-          {txt}
-        </button>
+        <Button event={meuEvento} text="Clique aqui" />
       </div>
     );
-  } else {
-    return (
-      <button
-        onClick={() => {
-          setTxt("0");
-        }}
-      >
-        Clique
-      </button>
-    );
-  }
 }

@@ -6,8 +6,8 @@ export default function Form() {
     console.log(`Usuário ${name} foi criado com senha ${password}`);
   }
 
-  const [name, setName] = useState();
-  const [password, setPassword] = useState();
+  const [name, setName] = useState("Teste");
+  const [password, setPassword] = useState("");
 
   return (
     <div>
