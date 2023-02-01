@@ -7,24 +7,16 @@ import List from "./components/List";
 import Evento from "./components/Evento";
 import Form from "./components/Form";
 import Condicional from "./components/Condicional";
+import OutraLista from "./components/OutraLista";
 
 function App() {
+  const itensLista = ["React", "Angular", "Vue"];
+
   return (
     <div className="App">
-      <Frase texto="teste" />
-      <HelloWorld />
-      <SayMyName name="Gotho" />
-      <Pessoa
-        nome="José"
-        idade="26"
-        profissao="Developer"
-        foto="https://img.freepik.com/fotos-gratis/construtor-de-homem-carpinteiro-polimentos-placa-de-madeira-com-uma-lixadeira-de-orbita-aleatoria_23-2147944854.jpg?w=2000"
-      />
-      <List />
-      <Evento />
-      <Form />
-      <h1>Renderiza condicional</h1>
-      <Condicional />
+      <h1>Renderização de listas</h1>
+      <OutraLista itens={itensLista} />
+      <OutraLista itens={[]} />
     </div>
   );
 }

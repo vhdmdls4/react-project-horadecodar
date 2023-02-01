@@ -10,6 +10,10 @@ export default function Condicional() {
     console.log("Teste");
   }
 
+  function limpaEmail() {
+    setUserEmail("");
+  }
+
   return (
     <div>
       <h2>Cadastre seu E-mail</h2>
@@ -22,6 +26,12 @@ export default function Condicional() {
         <button type="submit" onClick={enviarEmail}>
           Enviar e-mail
         </button>
+        {userEmail && (
+          <div>
+            <p>O Email é {userEmail}</p>
+            <button onClick={limpaEmail} />
+          </div>
+        )}
       </form>
     </div>
   );
